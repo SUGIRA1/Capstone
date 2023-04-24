@@ -1,0 +1,553 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f2f2f2;
+    color: #444;
+  }
+  
+  .auth-form {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .payment-form{
+    max-width: 400px;
+  }
+  
+  form h2 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  
+  form input {
+    margin-top: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"] {
+    display: block;
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  input[type="submit"], .Submit {
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  input[type="submit"]:hover, .Submit:hover {
+    background-color: #005a5a;
+  }
+  
+  .form-extra{
+    font-size: 14px !important;
+    margin-top: 25px;
+  }
+  
+  .change-pass-link{
+    font-size: 14px;
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  /* Header styles */
+  .header {
+    background-color: #008080; /* Teal background color */
+    color: white; /* Text color */
+    height: 70px; /* Set height of header */
+    display: flex; /* Use flexbox to center elements */
+    justify-content: space-between; /* Space out elements */
+    align-items: center; /* Vertically center elements */
+  }
+  
+  .header-logo {
+    font-size: 24px; /* Set font size of logo */
+    font-weight: bold; /* Make logo bold */
+    margin-left: 20px; /* Add margin to the left of the logo */
+  }
+  
+  .header-buttons {
+    margin-right: 20px; /* Add margin to the right of the buttons */
+  }
+  
+  .header-menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-menu-item {
+    margin-right: 30px;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  /* Button styling */
+  .button, .button--secondary {
+    display: inline-block; /* Make buttons inline */
+    padding: 10px 20px; /* Add padding to buttons */
+    border-radius: 5px; /* Round button corners */
+    text-decoration: none; /* Remove underline from buttons */
+    font-size: 16px; /* Set font size of buttons */
+    font-weight: bold; /* Make buttons bold */
+  }
+  
+  .button {
+    background-color: white; /* Set button background color */
+    color: #008080; /* Set button text color */
+    margin-right: 10px; /* Add margin to the right of the button */
+  }
+  
+  .button--secondary {
+    background-color: transparent; /* Set button background color to transparent */
+    border: 2px solid white; /* Add border to button */
+    color: white;
+  }
+  
+  
+  .header-dropdown {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .profile-img-container{
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+    margin-right: 10px;
+    background-color: #CCC;
+    border-radius: 100%;
+  }
+  
+  .profile-picture{
+    width: 100%;
+    height: auto;
+  }
+  
+  .dropdown-content {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none;
+  }
+  
+  .dropdown-content a, .dropdown-content p {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  
+  .dropdown-content a:hover, .dropdown-content p:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .dropdown-content hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 5px 0;
+  }
+  .header-dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .fas {
+    font-size: 16px;
+    margin-left: 5px;
+    color: rgb(214, 214, 214);
+    transition: color 0.3s ease;
+  }
+  
+  /* Main content styles */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 20px 0;
+  }
+  
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+  }
+  
+  .card {
+    flex-basis: calc(33.33% - 40px);
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 250px;
+  }
+  
+  .card-description {
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 250px;
+  }
+  
+  
+  .card-line {
+    height: 1px;
+    background-color: #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .card-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 40px;
+  }
+  
+  .card-column {
+    flex-basis: calc(33.33% - 20px);
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .card-column:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-column-image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  
+  .card-stats{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card-stats-money {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 10px;
+  }
+  
+  .card-stats-text {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  
+  /* Investment page styles */
+  
+  .investment-section {
+    background-color: #f5f5f5;
+    padding: 60px 0;
+  }
+  
+  .investment-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .investment-column {
+    flex-basis: calc(50% - 40px);
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .investment-title {
+    font-size: 32px;
+    margin: 0;
+    padding: 40px 40px 0 40px;
+  }
+  
+  .investment-description {
+    font-size: 16px;
+    padding: 20px 40px;
+  }
+  
+  .investment-money-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-top: 1px solid #e6e6e6;
+  }
+  
+  .investment-money-column {
+    text-align: center;
+  }
+  
+  .investment-money {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .investment-raised {
+    font-size: 14px;
+    margin: 0;
+    color: #999;
+  }
+  
+  .btn, .investment-button {
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover{
+    background-color: #004949;
+  }
+  
+  .investment-button:hover {
+    background-color: #004949;
+  }
+  
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    overflow: hidden;
+    border-radius: 5px;
+    max-height: 200px;
+  }
+  
+  .video-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  
+  .play-button:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 20px 30px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.9);
+  } 
+  
+  .video-title{
+    margin: 30px 0px 20px 20px;
+  }
+  
+  
+  /* payment success */
+  
+  .success-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .success-conf{
+     margin-top: 50px;
+  }
+  
+  .success-conf h3{
+    font-size: 23px;
+    margin: 20px 0px;
+  }
+  
+  /* 404 page */
+  
+  .title-404{
+    font-size: 40px  !important;
+  }
+  
+  
+  /* customer investments */
+  
+  .investments-section {
+    padding-bottom: 80px;
+  }
+  
+  .investments-title {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .stats-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  
+  .stats-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: calc(33.33% - 20px);
+  }
+  
+  .stats-number {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .detailed-title {
+    margin-bottom: 20px;
+  }
+  
+  .investments-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .investments-table th,
+  .investments-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .investments-table th {
+    background-color: #f7f7f7;
+  }
+  
+  .investments-table tbody tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  
+  /* Business page */
+  
+  .dashboard-title{
+    text-align: left !important;
+  }
+  
+  /* Business Reg */
+  
+  .businessreg-form{
+    max-width: 500px !important;
+  }
+  
+  #preview {
+    width: 300px;
+    height: 100px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+    display: block;
+  }
+  
+  #companyDesc{
+    width: 100%;
+  }
+
+  .form-error{
+    color: rgb(182, 0, 0);
+    font-size: 16px;
+  }
